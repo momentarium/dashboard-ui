@@ -1,0 +1,29 @@
+/* RankMovers shared styles. Loaded next to rank-movers.js on both dashboards.
+ * Uses the dashboard CSS variables when present, with the dark-theme values
+ * as fallbacks, so the card looks identical on Vercel and in Spaces. */
+.rm-card{background:var(--card,#161b24);border:1px solid #222a38;border-radius:14px;padding:14px;margin:10px 0}
+.rm-card h2{font-size:17px;margin:0 0 8px;color:var(--txt,#e6e9ef)}
+.rm-note{color:var(--mut,#9aa4b2);font-size:12px;margin:6px 4px}
+.rm-filters{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 4px}
+.rm-filter{background:#1c2330;color:#c9d4e8;border:1px solid #263047;padding:5px 12px;font-size:13px;cursor:pointer;border-radius:8px}
+.rm-filter.on{background:#5b8def;color:#fff;border-color:#5b8def}
+.rm-group{border-top:1px solid #222a38;padding:10px 0 4px;margin-top:6px}
+.rm-group:first-child{border-top:none}
+.rm-group-h{font-size:15px;font-weight:700;margin-bottom:6px}
+.rm-group-h a{color:#7fb3ff;text-decoration:none}
+.rm-group-counts{font-size:12px;font-weight:600;margin-left:8px;white-space:nowrap}
+.rm-cnt{margin-right:6px}
+.rm-rows{list-style:none;margin:6px 0 0;padding:0;font-size:14px;line-height:1.55}
+.rm-row{display:flex;align-items:baseline;gap:8px;margin-bottom:6px;flex-wrap:wrap}
+.rm-kw{font-weight:600}
+.rm-loc{display:inline-block;padding:1px 8px;border-radius:8px;font-size:11px;font-weight:600;background:rgba(154,164,178,.15);color:#9aa4b2;white-space:nowrap}
+.rm-chg{margin-left:auto;font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
+.rm-up{color:#4cc38a}
+.rm-dn{color:#ff6b6b}
+.rm-more{background:#1c2330;color:var(--txt,#e6e9ef);border:1px solid #263047;border-radius:8px;padding:4px 12px;font-size:12px;cursor:pointer;margin:2px 0 6px}
+.rm-more-wrap{margin:8px 0 0}
+@media (max-width:640px){
+  .rm-card{padding:10px}
+  .rm-row{font-size:13px}
+  .rm-chg{white-space:normal}
+}
